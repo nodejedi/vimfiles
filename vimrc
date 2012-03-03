@@ -16,7 +16,8 @@ filetype plugin indent on
 "let g:ctrlp_map = '<c-p>'
 
 set background=dark
-color molokai
+"color molokai
+color zenburn
 set nonumber
 set ruler       " show the cursor position all the time
 set cursorline
@@ -36,7 +37,7 @@ set backspace=indent,eol,start    " backspace through everything in insert mode
 " List chars
 set listchars=""                  " Reset the listchars
 set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
-set listchars+=trail:.            " show trailing spaces as dots
+"set listchars+=trail:.            " show trailing spaces as dots
 set listchars+=extends:>          " The character to show in the last column when wrap is
                                   " off and the line continues beyond the right of the screen
 set listchars+=precedes:<         " The character to show in the first column when wrap is

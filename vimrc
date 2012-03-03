@@ -7,12 +7,16 @@
 ""
 
 set nocompatible
-syntax enable
+syntax on
 set encoding=utf-8
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-call pathogen#infect()
+"pathogen
+runtime! autoload/pathogen.vim   
+if exists('g:loaded_pathogen')
+  call pathogen#runtime_append_all_bundles()
+  call pathogen#helptags()
+  call pathogen#infect()
+endif
+
 filetype plugin indent on
 
 "let g:ctrlp_map = '<c-p>'
@@ -25,10 +29,12 @@ au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 "With this, folding is disabled by default but can be quickly toggled per-file
 "by hitting zi. To enable folding by default, remove nofoldenable:
 "au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
-
+hi Normal ctermfg=252 ctermbg=237 term=standout
+set t_Co=256
 set background=dark
 "color molokai
-color zenburn
+"color zenburn
+color vibrantink
 set nonumber
 set ruler       " show the cursor position all the time
 set cursorline

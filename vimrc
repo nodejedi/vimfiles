@@ -9,11 +9,22 @@
 set nocompatible
 syntax enable
 set encoding=utf-8
-
+filetype off
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 call pathogen#infect()
 filetype plugin indent on
 
 "let g:ctrlp_map = '<c-p>'
+
+"============== coffeescript things
+"standard two-space indentation in CoffeeScript files
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+" fold by indentation in CoffeeScript files
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+"With this, folding is disabled by default but can be quickly toggled per-file
+"by hitting zi. To enable folding by default, remove nofoldenable:
+"au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 
 set background=dark
 "color molokai

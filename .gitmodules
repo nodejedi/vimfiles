@@ -34,3 +34,9 @@
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = https://github.com/mrtazz/molokai.vim
+[submodule "bundle/vim-git"]
+  path = bundle/vim-git
+  url = https://github.com/tpope/vim-git
+[submodule "ctrlp.vim"]
+  path = ctrlp.vim
+  url = https://github.com/kien/ctrlp.vim

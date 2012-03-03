@@ -13,6 +13,8 @@ set encoding=utf-8
 call pathogen#infect()
 filetype plugin indent on
 
+"let g:ctrlp_map = '<c-p>'
+
 set background=dark
 color molokai
 set nonumber

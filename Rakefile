@@ -6,9 +6,9 @@ task :update do
   sh "git submodule update --init"
 end
 
-desc %(Make ~/.vimrc and ~/.gvimrc symlinks)
+desc %(Make ~/.vimrc and ~/.gvimrc ~/.screenrc symlinks)
 task :link do
-  %w[vimrc gvimrc].each do |script|
+  %w[vimrc gvimrc screenrc].each do |script|
     dotfile = File.join(ENV['HOME'], ".#{script}")
     if File.exist? dotfile
       warn "~/.#{script} already exists"

@@ -1,9 +1,15 @@
+require 'fileutils'
+include FileUtils
+
 task :default => [:tmp_dirs, :update, :command_t, :link]
 
 desc %(Bring bundles up to date)
 task :update do
   sh "git submodule sync >/dev/null"
   sh "git submodule update --init"
+  sh "pwd"
+  sh "cp -r bundle/ctrlp.vim/autoload/* autoload/"
+  sh "cp -r bundle/ctrlp.vim/plugin/* plugin/"
 end
 
 desc %(Make ~/.vimrc and ~/.gvimrc ~/.screenrc symlinks)

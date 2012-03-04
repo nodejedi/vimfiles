@@ -20,7 +20,6 @@ endif
 filetype plugin indent on
 
 "let g:ctrlp_map = '<c-p>'
-
 "============== coffeescript things
 "standard two-space indentation in CoffeeScript files
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab

@@ -10,3 +10,4 @@ defbce "on"
 screen -t CODING	0
 screen -t TERM    1
 screen -t ETC     2
+screen -t TUTOR   3

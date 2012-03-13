@@ -1,11 +1,40 @@
---type-add=ruby=.haml,.builder
---type-add=css=.sass
---type-set=markdown=.markdown,.md,.mdown
+--smart-case
+
+--sort-files
+
+# Always color, even if piping to another program
+--color
+
+# Ignore .js files because I LOVE coffeescript
+--type-set=JSFILES=.js
+--noJSFILES
+
+# HAML & SASS
+--type-add=ruby=.haml,.sass,.scss
+--type-add=html=.haml
+--type-add=css=.sass,.scss
+# Ruby
+--type-add=ruby=Rakefile,Capfile,Gemfile
+# Cucumber
 --type-set=cucumber=.feature
+# CoffeeScript
+--type-set=coffeescript=.coffee
+# JSON
+--type-set=json=.json
+--type-add=js=.json
+--type-add=yaml=.json
+# Conf
+--type-set=conf=.conf,.config
+# Markdown, Textile, Rdoc & POD
+--type-set=markdown=.markdown,.md,.mdown,.mkd,.mkdn
+--type-set=textile=.textile
+--type-set=rdoc=.rdoc
+--type-set=pod=.pod
+# documentation
+--type-set=documentation=.markdown,.md,.mdown,.mkd,.mkdn,.textile,.rdoc,.pod.
+
 --type-set=zsh=.zsh,.zsh-theme
---type-set=config=.conf
---type-set=views=.erb,.haml
---ignore-dir=gems
+
 --ignore-dir=plugins
 --ignore-dir=rails
 --ignore-dir=log

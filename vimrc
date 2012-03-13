@@ -35,6 +35,7 @@ set background=dark
 "color zenburn
 color vibrantink
 set nonumber
+"set number
 set ruler       " show the cursor position all the time
 set cursorline
 set showcmd     " display incomplete commands
@@ -44,7 +45,8 @@ set showcmd     " display incomplete commands
 set hidden
 
 "" Whitespace
-set nowrap                        " don't wrap lines
+"set nowrap                        " don't wrap lines
+set wrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs

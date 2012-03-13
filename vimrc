@@ -19,6 +19,15 @@ endif
 
 filetype plugin indent on
 
+"cmd-shift arrow for navigating tabs
+"map <C-S-]> gT
+"map <C-S-[> gt
+"map <C-S-1> 1gt
+"map <C-S-2> 2gt
+"map <C-S-3> 3gt
+"map <C-S-0> :tablast<CR>
+"map <C-S-n> :tabnew<CR>
+
 "let g:ctrlp_map = '<c-p>'
 "============== coffeescript things
 "standard two-space indentation in CoffeeScript files

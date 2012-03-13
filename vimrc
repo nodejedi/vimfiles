@@ -28,7 +28,22 @@ filetype plugin indent on
 "map <C-S-0> :tablast<CR>
 "map <C-S-n> :tabnew<CR>
 
+"   CtrlP Plugin 
 "let g:ctrlp_map = '<c-p>'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+let g:ctrlp_by_filename = 1
+let g:ctrlp_open_new_file = 1
+let g:ctrlp_open_multi = '1t'
+let g:ctrlp_follow_symlinks = 1
+
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': ['<c-t>'],
+  \ 'AcceptSelection("t")': ['<cr>']
+  \ }
+
+
+
 "============== coffeescript things
 "standard two-space indentation in CoffeeScript files
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab

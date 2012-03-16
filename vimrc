@@ -39,9 +39,15 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("t")': ['<cr>']
   \ }
 
+"===== vim-css3-syntax
+" ~/.vim/after/syntax/html.vim
+"===== vim-css-color
+let g:cssColorVimDoNotMessMyUpdatetime = 1
 
+"===== LESS 
+nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space> 
 
-"============== coffeescript things
+"===== coffeescript things
 "standard two-space indentation in CoffeeScript files
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 " fold by indentation in CoffeeScript files

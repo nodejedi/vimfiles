@@ -19,24 +19,11 @@ endif
 
 filetype plugin indent on
 
-"cmd-shift arrow for navigating tabs
-"map <C-S-]> gT
-"map <C-S-[> gt
-"map <C-S-1> 1gt
-"map <C-S-2> 2gt
-"map <C-S-3> 3gt
-"map <C-S-0> :tablast<CR>
-"map <C-S-n> :tabnew<CR>
-
-" tab navigation like firefox
-:nmap <C-S-tab> :tabprevious<CR>
-:nmap <C-tab> :tabnext<CR>
-:map <C-S-tab> :tabprevious<CR>
-:map <C-tab> :tabnext<CR>
-:imap <C-S-tab> <Esc>:tabprevious<CR>i
-:imap <C-tab> <Esc>:tabnext<CR>i
+"navigating tabs
 :nmap <C-t> :tabnew<CR>
 :imap <C-t> <Esc>:tabnew<CR>
+:nmap <C-n> :tabnext<CR>
+:imap <C-n> <Esc>:tabnext<CR>i
 
 "   CtrlP Plugin 
 "let g:ctrlp_map = '<c-p>'

@@ -20,10 +20,10 @@ endif
 filetype plugin indent on
 
 "navigating tabs
-:nmap <C-t> :tabnew<CR>
-:imap <C-t> <Esc>:tabnew<CR>
-:nmap <C-n> :tabnext<CR>
-:imap <C-n> <Esc>:tabnext<CR>i
+:nmap <C-n> :tabnew<CR>
+:imap <C-n> <Esc>:tabnew<CR>
+:nmap <C-m> :tabnext<CR>
+:imap <C-m> <Esc>:tabnext<CR>i
 
 "   CtrlP Plugin 
 "let g:ctrlp_map = '<c-p>'

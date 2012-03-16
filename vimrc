@@ -39,6 +39,10 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("t")': ['<cr>']
   \ }
 
+"==== using ctags with vim 
+" http://effectif.com/vim/using-ctags-with-bundler-gems
+set tags+=gems.tags
+
 "===== vim-css3-syntax
 " ~/.vim/after/syntax/html.vim
 "===== vim-css-color

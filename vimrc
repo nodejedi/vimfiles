@@ -28,6 +28,16 @@ filetype plugin indent on
 "map <C-S-0> :tablast<CR>
 "map <C-S-n> :tabnew<CR>
 
+" tab navigation like firefox
+:nmap <C-S-tab> :tabprevious<CR>
+:nmap <C-tab> :tabnext<CR>
+:map <C-S-tab> :tabprevious<CR>
+:map <C-tab> :tabnext<CR>
+:imap <C-S-tab> <Esc>:tabprevious<CR>i
+:imap <C-tab> <Esc>:tabnext<CR>i
+:nmap <C-t> :tabnew<CR>
+:imap <C-t> <Esc>:tabnew<CR>
+
 "   CtrlP Plugin 
 "let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'

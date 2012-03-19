@@ -22,8 +22,8 @@ filetype plugin indent on
 "navigating tabs
 :nmap <C-n> :tabnew<CR>
 :imap <C-n> <Esc>:tabnew<CR>
-:nmap <C-m> :tabnext<CR>
-:imap <C-m> <Esc>:tabnext<CR>i
+":nmap <C-m> :tabnext<CR>
+":imap <C-m> <Esc>:tabnext<CR>i
 
 "   CtrlP Plugin 
 "let g:ctrlp_map = '<c-p>'

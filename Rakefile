@@ -14,7 +14,7 @@ end
 
 desc %(Make ~/.vimrc and ~/.gvimrc ~/.screenrc symlinks)
 task :link do
-  %w[vimrc gvimrc screenrc gemrc ackrc].each do |script|
+  %w[vimrc gvimrc screenrc gemrc ackrc inputrc].each do |script|
     dotfile = File.join(ENV['HOME'], ".#{script}")
     if File.exist? dotfile
       warn "~/.#{script} already exists"

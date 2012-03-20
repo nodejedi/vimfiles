@@ -11,6 +11,15 @@ Thanks to these guys:
 My configuration uses [Pathogen](https://github.com/tpope/vim-pathogen) and git submodules.
 (But you don't need to care about any of that.)
 
+## For utf-8 encoding and etc
+
+1. download vim
+
+2. compile option
+./configure --with-features-huge  --enable-multibyte --enable-fontset
+--enable-hangulinput --enable-iconv
+
+
 ## Installation:
 
 Prerequisites: ruby, git.

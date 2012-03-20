@@ -24,14 +24,11 @@ endif
 
 filetype plugin indent on
 
-"cmd-shift arrow for navigating tabs
-"map <C-S-]> gT
-"map <C-S-[> gt
-"map <C-S-1> 1gt
-"map <C-S-2> 2gt
-"map <C-S-3> 3gt
-"map <C-S-0> :tablast<CR>
-"map <C-S-n> :tabnew<CR>
+"navigating tabs
+:nmap <C-n> :tabnew<CR>
+:imap <C-n> <Esc>:tabnew<CR>
+":nmap <C-m> :tabnext<CR>
+":imap <C-m> <Esc>:tabnext<CR>i
 
 "   CtrlP Plugin 
 "let g:ctrlp_map = '<c-p>'
@@ -47,9 +44,19 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("t")': ['<cr>']
   \ }
 
+"==== using ctags with vim 
+" http://effectif.com/vim/using-ctags-with-bundler-gems
+set tags+=gems.tags
 
+"===== vim-css3-syntax
+" ~/.vim/after/syntax/html.vim
+"===== vim-css-color
+let g:cssColorVimDoNotMessMyUpdatetime = 1
 
-"============== coffeescript things
+"===== LESS 
+nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space> 
+
+"===== coffeescript things
 "standard two-space indentation in CoffeeScript files
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 " fold by indentation in CoffeeScript files

@@ -5,7 +5,6 @@
 ""   Tim Pope  <tbaggery.com>
 ""   Janus  <github.com/carlhuda/janus>
 "   "
-
 syntax on
 set enc=UTF-8
 set encoding=utf-8

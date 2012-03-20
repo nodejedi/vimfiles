@@ -16,8 +16,7 @@ My configuration uses [Pathogen](https://github.com/tpope/vim-pathogen) and git 
 1. download vim
 
 2. compile option
-./configure --with-features-huge  --enable-multibyte --enable-fontset
---enable-hangulinput --enable-iconv
+./configure --with-features=huge  --enable-multibyte --enable-fontset --enable-hangulinput
 
 
 ## Installation:

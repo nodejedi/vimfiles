@@ -13,7 +13,7 @@ let hangeul_enabled = 1
 set fencs=utf-8,euc-kr,cp949,cp932,euc-jp,shift-jis,big5,latin1,ucs-2l
 set nocompatible
 "pathogen
-runtime! autoload/pathogen.vim   
+runtime! autoload/pathogen.vim
 if exists('g:loaded_pathogen')
   call pathogen#runtime_append_all_bundles()
   call pathogen#helptags()
@@ -28,7 +28,7 @@ filetype plugin indent on
 ":nmap <C-m> :tabnext<CR>
 ":imap <C-m> <Esc>:tabnext<CR>i
 
-"   CtrlP Plugin 
+"   CtrlP Plugin
 "let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
@@ -42,7 +42,7 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("t")': ['<cr>']
   \ }
 
-"==== using ctags with vim 
+"==== using ctags with vim
 " http://effectif.com/vim/using-ctags-with-bundler-gems
 set tags+=gems.tags
 
@@ -51,14 +51,15 @@ set tags+=gems.tags
 "===== vim-css-color
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
-"===== LESS 
-nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space> 
+"===== LESS
+nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
 "===== coffeescript things
 "standard two-space indentation in CoffeeScript files
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 " fold by indentation in CoffeeScript files
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+
 "With this, folding is disabled by default but can be quickly toggled per-file
 "by hitting zi. To enable folding by default, remove nofoldenable:
 "au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
@@ -73,8 +74,9 @@ set nonumber
 set ruler       " show the cursor position all the time
 set cursorline
 set showcmd     " display incomplete commands
+set shell=bash  " avoids munging PATH under zsh
 
-"ack conf depend on OS 
+"ack conf depend on OS
 if has("unix")
   let s:uname = system("uname")
   let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -112,7 +114,7 @@ set smartcase                     " ... unless they contain at least one capital
 function s:setupWrapping()
   set wrap
   set wrapmargin=2
-  set textwidth=72
+  set textwidth=80
 endfunction
 
 if has("autocmd")
@@ -158,7 +160,7 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 "map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
 " ignore Rubinius, Sass cache files
-set wildignore+=*.rbc,*.scssc,*.sassc
+set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
 
 nnoremap <leader><leader> <c-^>
 
@@ -197,6 +199,3 @@ if has("statusline") && !&cp
   set statusline+=Buf:#%n
   set statusline+=[%b][0x%B]
 endif
-
-"let g:CommandTMaxHeight=10
-

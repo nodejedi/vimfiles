@@ -10,7 +10,6 @@ syntax on
 set enc=UTF-8
 set encoding=utf-8
 set fileencodings=utf-8,euc-kr
-autocmd!
 let hangeul_enabled = 1
 set fencs=utf-8,euc-kr,cp949,cp932,euc-jp,shift-jis,big5,latin1,ucs-2l
 set nocompatible

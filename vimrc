@@ -73,8 +73,8 @@ endif
 "colorscheme solarized
 let g:solarized_termcolors=256
 "color molokai
-color zenburn
-"color vibrantink
+"color zenburn
+color vibrantink
 set nonumber
 "set number
 set ruler       " show the cursor position all the time

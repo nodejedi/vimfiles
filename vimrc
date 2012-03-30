@@ -5,7 +5,6 @@
 ""   Tim Pope  <tbaggery.com>
 ""   Janus  <github.com/carlhuda/janus>
 "   "
-syntax on
 set enc=UTF-8
 set encoding=utf-8
 set fileencodings=utf-8,euc-kr
@@ -65,10 +64,17 @@ au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 "au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 hi Normal ctermfg=252 ctermbg=237 term=standout
 set t_Co=256
-set background=dark
+syntax enable
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+"colorscheme solarized
+let g:solarized_termcolors=256
 "color molokai
-"color zenburn
-color vibrantink
+color zenburn
+"color vibrantink
 set nonumber
 "set number
 set ruler       " show the cursor position all the time

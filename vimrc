@@ -24,9 +24,13 @@ filetype plugin indent on
 "navigating tabs
 :nmap <C-n> :tabnew<CR>
 :imap <C-n> <Esc>:tabnew<CR>
-":nmap <C-m> :tabnext<CR>
-":imap <C-m> <Esc>:tabnext<CR>i
-
+map th :tabfirst<CR>
+map tl :tablast<CR>
+map tj :tabprevious<CR>
+map tk :tabnext<CR>
+map tt :tabedit<Space>
+map tm :tabm<Space>
+map tn :tabnext<Space>
 "   CtrlP Plugin
 "let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
@@ -73,8 +77,8 @@ endif
 "colorscheme solarized
 let g:solarized_termcolors=256
 "color molokai
-color zenburn
-"color vibrantink
+"color zenburn
+color vibrantink
 set nonumber
 "set number
 set ruler       " show the cursor position all the time

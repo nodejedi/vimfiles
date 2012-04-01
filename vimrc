@@ -68,19 +68,22 @@ au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 "au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 hi Normal ctermfg=252 ctermbg=237 term=standout
 set t_Co=256
-syntax enable
-if has('gui_running')
-  set background=light
-else
-  set background=dark
-endif
-"colorscheme solarized
 let g:solarized_termcolors=256
+
+syntax enable
+"if has('gui_running')
+"  set background=light
+"else
+"  set background=dark
+"endif
+set background=light
+call togglebg#map("<F5>")
+colorscheme solarized
 "color molokai
 "color zenburn
-color vibrantink
-set nonumber
-"set number
+"color vibrantink
+"set nonumber
+set number
 set ruler       " show the cursor position all the time
 set cursorline
 set showcmd     " display incomplete commands

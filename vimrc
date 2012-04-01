@@ -30,7 +30,7 @@ map tj :tabprevious<CR>
 map tk :tabnext<CR>
 map tt :tabedit<Space>
 map tm :tabm<Space>
-map tn :tabnext<Space>
+map tn :tabnext<CR>
 "   CtrlP Plugin
 "let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'

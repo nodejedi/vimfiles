@@ -1,8 +1,9 @@
-Mislav's vim configuration
+Jai-gouk's vim configuration
 ==========================
 
 Thanks to these guys:
 
+* [Mislav](http://github.com/mislav)
 * [Gary Bernhardt](http://destroyallsoftware.com),
 * [Drew Neil](http://vimcasts.org),
 * [Tim Pope](http://tbaggery.com),
@@ -46,7 +47,7 @@ files inside the ".vim" directory.
 ## Plugins:
 
 * ack
-* command-t
+* ctrlp
 * commentary
 * endwise
 * fugitive
@@ -55,3 +56,6 @@ files inside the ".vim" directory.
 * haml
 * scss
 * coffee-script
+* less
+* css syntax highlight
+* solarized color theme

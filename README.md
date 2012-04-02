@@ -58,4 +58,5 @@ files inside the ".vim" directory.
 * coffee-script
 * less
 * css syntax highlight
-* solarized color theme
+* solarized vim color theme
+* solarized iterm2 color theme

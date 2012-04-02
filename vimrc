@@ -71,12 +71,12 @@ set t_Co=256
 let g:solarized_termcolors=256
 
 syntax enable
-if has('gui_running')
-  set background=light
-else
-  set background=dark
-endif
-"set background=light
+"if has('gui_running')
+"  set background=light
+"else
+"  set background=dark
+"endif
+set background=light
 "set background=dark
 call togglebg#map("<F5>")
 colorscheme solarized

@@ -1,7 +1,7 @@
 require 'fileutils'
 include FileUtils
 
-task :default => [:tmp_dirs, :update, :link]
+task :default => [:coffeetags, :tmp_dirs, :update, :link, :drjs]
 
 desc %(Bring bundles up to date)
 task :update do
@@ -38,6 +38,20 @@ task :tmp_dirs do
   mkdir_p "_temp"
 end
 
+desc %(Install CoffeeTags)
+task :coffeetags do
+  sh "gem install CoffeeTags"
+end
+
+desc %(Install doctorjs http://drjs.org)
+task :drjs do
+  Dir.chdir "bundle/doctorjs" do
+    sh "pwd"
+    sh "git submodule init"
+    sh "git submodule update"
+    sh "make install"
+  end
+end
 #desc %(Compile Command-T plugin)
 #task :command_t => :macvim_check do
 #  vim = which('mvim') || which('vim') or abort "vim not found on your system"

@@ -55,3 +55,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/doctorjs"]
+	path = bundle/doctorjs
+	url = https://github.com/mozilla/doctorjs.git

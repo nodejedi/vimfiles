@@ -49,6 +49,9 @@ let g:ctrlp_prompt_mappings = {
 " http://effectif.com/vim/using-ctags-with-bundler-gems
 set tags+=gems.tags
 
+"==== Tagbar
+nmap <C-f> :TagbarToggle<CR>
+
 "===== vim-css3-syntax
 " ~/.vim/after/syntax/html.vim
 "===== vim-css-color
@@ -212,4 +215,19 @@ if has("statusline") && !&cp
   set statusline+=Col:%v
   set statusline+=Buf:#%n
   set statusline+=[%b][0x%B]
+endif
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
 endif

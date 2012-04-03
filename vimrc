@@ -48,6 +48,9 @@ let g:ctrlp_prompt_mappings = {
 "==== using ctags with vim
 " http://effectif.com/vim/using-ctags-with-bundler-gems
 set tags+=gems.tags
+let g:tagbar_type_javascript = {
+   \ 'ctagsbin' : '/usr/local/bin/jsctags'
+ \ }
 
 "==== Tagbar
 nmap <C-f> :TagbarToggle<CR>

@@ -19,6 +19,12 @@ if exists('g:loaded_pathogen')
   call pathogen#infect()
 endif
 
+if has("gui_macvim")
+   macmenu &File.New\ Tab key=<nop>
+   map <D-t> <Plug>PeepOpen
+end
+
+
 filetype plugin indent on
 
 "navigating tabs
